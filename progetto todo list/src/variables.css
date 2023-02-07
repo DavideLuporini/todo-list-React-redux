@@ -1,0 +1,29 @@
+:root {
+  /* COMPONENTS */
+  --backgroundLight: #eff1f4;
+  --colorLight: rgb(0, 0, 0);
+  --backgroundDark: rgb(31, 31, 31);
+  --colorDark: rgba(255, 255, 255, 0.773);
+  --backgroundComponentDark: rgba(100, 100, 100, 0.633);
+  --backgroundComponentLight: rgb(235, 237, 239);
+  --shadowDark: 0px 0px 7.5px -4px #ffffff;
+  --shadowLight: 0px 0px 10px -5px #000000;
+  --backgroundPrimary: #58a7e2;
+  --BorderRadiusComponent: 10px;
+
+  /* BUTTONS */
+  --shadowPrimary: 0rem 0rem 0rem 2px #1511e742;
+  --shadowInsetPrimary: inset 0rem 0rem 0rem 1px #58a7e2;
+  --colorPrimary: #58a7e2;
+  --colorSuccess: #49dbbd;
+  --backgroundSuccess: #49dbbd;
+  --colorDanger: #ae423f;
+  --backgroundDanger: #ae423f;
+  --shadownInnerPrimaryButton: inset 0rem 0rem 0rem 0.5px #00000038;
+  --paddingButton: 8px 10px;
+}
+
+.btn-trasparent {
+  border: none;
+  background-color: transparent;
+}

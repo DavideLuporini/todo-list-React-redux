@@ -1,0 +1,116 @@
+.filters-container {
+  display: flex;
+}
+
+.container-sm {
+  max-width: 568px;
+}
+
+#tag-filter-list .button-search-modal {
+  width: 40px;
+  color: red;
+  position: absolute;
+  bottom: 0px;
+  right: 25%;
+  transform: translate(50%, -50%);
+  z-index: 2;
+  border-radius: 50%;
+  padding: 12px 7px;
+  background-color: trasparent;
+  color: white;
+  -webkit-user-select: none;
+  user-select: none;
+  font-size: 32px;
+  box-shadow: 0px 7px 15px -7px #000000;
+}
+
+#tag-filter-list li {
+  margin: 5px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .button-search-modal {
+    display: none;
+  }
+}
+
+#edit-button {
+  height: 40px;
+  position: relative;
+  z-index: 2;
+  color: black;
+  font-size: 1.5rem;
+}
+.clicked {
+  position: relative;
+  color: white;
+  z-index: 2;
+}
+
+.edit-mode-title {
+  font-weight: bold;
+  font-size: 1rem;
+  color: transparent;
+  user-select: none;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#visibility-filter-list > div > label {
+  font-size: 0.5rem;
+  letter-spacing: 2px;
+  padding: 2px;
+  align-self: baseline;
+}
+
+#visibility-filter-container > div.segmented-control > label > p {
+  font-size: 1.2em;
+}
+#visibility-filter-container > div.segmented-control > label > p {
+  font-size: 1.2em;
+}
+
+#tag-filter-list > div > label {
+  width: auto;
+}
+
+#tag-filter-list {
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+#empty-container {
+  height: calc(100vh - 250px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#empty-container > div.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+#empty-container > div.title.dark {
+  color: var(--colorDark);
+}
+#empty-container > div.sub-title.dark {
+  color: var(--colorDark);
+}
+
+@media screen and (max-width: 575px) {
+  #tag-filter-list {
+    order: 1;
+    margin-top: 10px;
+  }
+  #modal-filters-tag {
+    backdrop-filter: blur(6px);
+  }
+}
+
+#tag-filter-list {
+  justify-content: start;
+}
+
+#filter-container {
+  margin-bottom: 40px;
+}

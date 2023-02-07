@@ -1,0 +1,66 @@
+.icon-undo {
+  color: rgba(255, 166, 0, 0.593);
+  font-size: 14px;
+}
+.icon-undo:hover {
+  color: rgba(220, 144, 2, 0.729);
+  font-size: 14px;
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+.icon-undo.disabled:hover {
+  opacity: 0.8;
+  color: grey;
+  cursor: not-allowed;
+  transform: scale(1);
+}
+.icon-undo.dark {
+  color: rgba(252, 178, 43, 0.698);
+}
+.icon-undo.dark:hover {
+  color: rgba(249, 194, 91, 0.807);
+}
+
+.icon-success {
+  color: rgba(0, 128, 0, 0.607);
+  font-size: 18px;
+}
+.icon-success:hover {
+  color: rgba(1, 85, 1, 0.664);
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+.icon-success.disabled:hover {
+  opacity: 0.8;
+  color: grey;
+  transform: scale(1);
+  cursor: not-allowed;
+}
+.icon-success.dark {
+  color: rgba(5, 246, 5, 0.607);
+}
+.icon-success.dark:hover {
+  color: rgba(64, 245, 64, 0.75);
+}
+
+.disabled {
+  opacity: 0.6;
+  color: grey;
+  cursor: not-allowed;
+}
+
+#root
+  > div
+  > header
+  > div:nth-child(3)
+  > div
+  > div.container
+  > div
+  > ul
+  > li.dark {
+  background-color: var(--backgroundComponentDark);
+}
+
+.icon.dark {
+  color: rgba(255, 255, 255, 0.453);
+}

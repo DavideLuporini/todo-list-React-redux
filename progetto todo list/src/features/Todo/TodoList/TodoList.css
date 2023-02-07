@@ -1,0 +1,251 @@
+ul.todolist {
+  position: relative;
+  list-style-type: none;
+  max-width: 768px;
+  /* max-height: calc(100vh -250px); */
+  overflow: auto;
+  padding-bottom: 40px;
+  height: 100%;
+}
+
+ul.todolist li {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 7px -5px #000000;
+  padding: 12px;
+  background-color: #fff;
+  margin: 30px 0px;
+  border-radius: 25px;
+  position: relative;
+  height: 45px;
+  z-index: 1;
+}
+ul.todolist li#no-task-container {
+  border-radius: var(--BorderRadiusComponent);
+}
+ul.todolist li.dark {
+  box-shadow: var(--shadowDark);
+  color: var(--colorDark);
+  background-color: var(--backgroundComponentDark);
+}
+ul.todolist li:hover {
+  box-shadow: 0px 0px 10px -5px #000000;
+  transition: 0.3s;
+}
+ul li.completato {
+  filter: blur(0.3px);
+}
+
+ul li span {
+  margin-left: 10px;
+  font-size: 0.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: start;
+  user-select: none;
+}
+ul li input {
+  margin-left: 10px;
+  font-size: 0.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: start;
+  font-weight: bold;
+  text-decoration: none;
+}
+ul li input.dark {
+  background-color: #7a79798e;
+  color: white;
+}
+ul li input::placeholder.dark {
+  color: white;
+}
+
+.circle {
+  border: 1px solid #989797;
+  -webkit-box-shadow: inset 0px 0px 0px 2.2px #fff;
+  box-shadow: inset 0px 0px 0px 2.2px #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.circle.non_completato {
+  background-color: red;
+}
+
+/* badges */
+.badge {
+  user-select: none;
+  padding: 2px 3px;
+  z-index: 0;
+  font-size: 0.6rem;
+}
+#badge-container {
+  position: absolute;
+  top: -21px;
+  right: 45px;
+  z-index: 0;
+}
+/* .famiglia {
+  background-color: #dc35469b;
+}
+.casa {
+  background-color: rgba(17, 17, 207, 0.6);
+}
+.lavoro {
+  background-color: rgba(11, 166, 34, 0.6);
+}
+.nocategory {
+  background-color: rgb(107 107 107 / 35%);
+} */
+
+.badge.lavoro,
+.badge.casa,
+.badge.famiglia,
+.badge.nocategory {
+  font-size: 0.5rem;
+  padding: 7px 12px 6px 12px;
+  border-radius: 10px 10px 0px 0px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.badge.lavoro.edit-mode,
+.badge.casa.edit-mode,
+.badge.famiglia.edit-mode,
+.badge.nocategory.edit-mode {
+  font-size: 0.5rem;
+  padding: 6px 12px 3px 12px;
+  border-radius: 10px 10px 0px 0px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+div.completato > svg {
+  color: var(--colorPrimary);
+}
+/* div.non_completato > svg > path {
+  color: #f3f5f7;
+} */
+
+.no-task-title {
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+.no-task-subtitle {
+  font-weight: bold;
+  font-size: 0.5rem;
+}
+
+/* #btn-remove-container {
+  opacity: 0;
+  transition-delay: 0.5s;
+  transition: 0.3s;
+} */
+#btn-remove-container {
+  opacity: 1;
+  transition: 0.3s;
+  transition-delay: 0.5s;
+}
+
+/* edit mode */
+
+/* .edit-todos-mode-container {
+  background-color: rgba(0, 0, 0, 0);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  bottom: 100;
+  height: 100%;
+  transition: 1s;
+}
+*/
+.edit-todos-mode-container.active {
+  background-color: rgb(0 0 0 / 20%);
+  height: 100%;
+
+  transition: 1s;
+}
+
+#button-confirm-edit {
+  position: relative;
+  z-index: 2;
+}
+/* 
+.edit-todos-mode-list {
+  height: 0%;
+  transition: 1s;
+}
+.edit-todos-mode-list.active {
+  height: 0%;
+  overflow: hidden;
+  transition-delay: 1s;
+  transition: 1s;
+} */
+
+.fadeEffect {
+  background-color: rgba(255, 255, 255, 1);
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+.fadeEffect.in {
+  background-color: rgba(155, 155, 155, 0.3004);
+  z-index: 1;
+  top: 0%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+  /* filter: blur(1px); */
+  backdrop-filter: blur(4px);
+}
+.fadeEffect.out {
+  background-color: rgba(255, 255, 255, 0);
+  z-index: -1;
+  top: 0%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+  filter: blur(1px);
+}
+
+#no-task-container {
+  z-index: 0;
+  animation: scroll-in 0.5s linear;
+}
+#no-task-container.dark {
+  background-color: var(--backgroundComponentDark);
+}
+
+/* ## ICONS */
+
+.icon.light {
+  color: gray;
+}
+
+@keyframes scroll-in {
+  0% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+li.dark > div > div > svg {
+  color: var(--colorPrimary);
+}

@@ -1,0 +1,6 @@
+.select-input {
+  background-color: var(--backgroundComponentLight);
+}
+.select-input.dark {
+  background-color: var(--backgroundComponentDark);
+}

@@ -1,0 +1,16 @@
+.btn-remove {
+  border-radius: 5px;
+  font-size: 0.5rem;
+  background-color: transparent;
+  border: none;
+}
+
+.icon-trash {
+  font-size: 0.8rem;
+  color: #ff00008f;
+}
+.icon-trash:hover {
+  transform: scale(1.05);
+  color: #ff0000e8;
+  transition: 0.3s;
+}

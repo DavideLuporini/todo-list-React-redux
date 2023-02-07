@@ -1,0 +1,69 @@
+#tag-filters-button {
+  position: relative;
+  font-size: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  user-select: none;
+  padding: var(--paddingButton);
+  background-color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  user-select: none;
+  box-shadow: var(--shadownInnerPrimaryButton);
+  border-radius: 3px;
+}
+
+#tag-filters-button:hover {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+
+.tag-control {
+  box-shadow: 0px 0px 7px -5px #000000;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  user-select: none;
+  margin: 5px 0px;
+}
+
+.tag-control input {
+  display: none;
+}
+
+.tag-control > input:checked + label {
+  transition: all 0.5s ease;
+  color: #2a2a2b;
+  color: white;
+  border-radius: 8px;
+}
+
+.tag-checkbox {
+  font-size: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s ease;
+  border-radius: var(--BorderRadiusComponent);
+  padding: 2px 5px;
+  width: auto;
+  min-width: 55px;
+}
+.tag-checkbox.dark.nocategory {
+  background-color: rgb(107 107 107);
+}
+.tag-checkbox.dark.casa {
+  background-color: #171788;
+}
+.tag-checkbox.dark.lavoro {
+  background-color: #147021;
+}
+.tag-checkbox.dark.famiglia {
+  background-color: #922c37;
+}
+.tag-checkbox:checked + label {
+  background-color: white;
+}

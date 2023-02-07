@@ -1,0 +1,52 @@
+.radio-button {
+  display: flex;
+}
+
+.radio-button .option {
+  padding: 4px 8px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.radio-button .option.selected {
+  padding: 4px 8px;
+  border: 1px solid #000;
+  background-color: blue;
+  color: white;
+}
+.radio-button input {
+  display: none;
+}
+.radio-button label {
+  display: flex;
+  padding: var(--paddingButton);
+  background-color: white;
+  font-size: 8px;
+  box-shadow: var(--shadownInnerPrimaryButton);
+}
+.radio-button > div > label.segmented-control__DONE {
+  border-radius: 0 3px 3px 0;
+}
+.radio-button > div > label.segmented-control__ALL {
+  border-radius: 3px 0 0 3px;
+}
+.radio-button > div > label.segmented-control__TODO {
+  border-radius: 0px 0 0 0px;
+}
+
+.radio-button > div > input:checked + label {
+  transition: all 0.5s ease;
+  box-shadow: var(--shadowPrimary), var(--shadowInsetPrimary);
+  color: var(--colorPrimary);
+  position: relative;
+  font-weight: bold;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.segmented-control__ALL.dark,
+.segmented-control__TODO.dark,
+.segmented-control__DONE.dark {
+  color: var(--colorDark);
+  background-color: var(--backgroundComponentDark);
+}

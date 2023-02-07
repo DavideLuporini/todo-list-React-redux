@@ -1,0 +1,65 @@
+#modal-input {
+  position: absolute;
+  z-index: 3;
+  color: black;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 90%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: var(--BorderRadiusComponent);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#modal-input.dark {
+  color: var(--colorDark);
+  background-color: rgb(88, 88, 88);
+}
+#modal-input.dark input {
+  background-color: gray;
+  color: white;
+}
+#modal-input.dark select {
+  background-color: gray;
+  color: white;
+}
+#modal-input.dark input::placeholder {
+  color: rgba(255, 255, 255, 0.471);
+}
+#modal-input.dark div,
+#modal-input.dark label {
+  color: var(--colorDark);
+}
+
+.close-icon-search {
+  text-align: right;
+  margin-top: 10px;
+}
+.open-icon-search {
+  text-align: right;
+  margin-top: 10px;
+}
+
+#modal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  bottom: 0;
+  height: 100vh;
+  background-color: rgb(0 0 0 / 20%);
+}
+
+.modal-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding-bottom: 15px;
+}
+
+.subtitle-modal {
+  font-size: 12px;
+  margin: 5px 0 2px 0;
+}

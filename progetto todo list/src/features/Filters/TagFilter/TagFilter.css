@@ -1,0 +1,47 @@
+.select-tag {
+  color: black;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 1px 0px rgba(96, 156, 90, 0.7);
+  box-shadow: 0px 0px 1px 0px rgba(96, 156, 90, 0.7);
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 0px 10px;
+  font-size: 0.5em;
+  border: none;
+}
+
+.select-tag-label {
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#modal-filters-tag {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  right: 53px;
+  transform: translate(50%, -00%);
+  border-radius: var(--BorderRadiusComponent);
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.049);
+}
+#modal-filters-tag.true {
+  z-index: 1;
+  transition: 0.5s;
+}
+#tag-filters-container {
+  position: relative;
+  width: 75px;
+}
+#tag-filters-button.dark {
+  background-color: var(--backgroundComponentDark);
+  color: var(--colorDark);
+}
+#tag-filters-button {
+  border: none;
+}
+#tag-filters-button.clicked {
+  border: none;
+  box-shadow: var(--shadowPrimary), var(--shadowInsetPrimary);
+}

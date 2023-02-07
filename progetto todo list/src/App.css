@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+.App {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+.App.light {
+  background-color: var(--backgroundLight);
+  transition: 0.5s;
+}
+.App.dark {
+  background-color: var(--backgroundDark);
+  transition: 0.5s;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: rgb(112, 76, 182);
+}
+
+@keyframes App-logo-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.blur {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .blur {
+    display: block;
+    position: fixed;
+    bottom: -58px;
+    right: 50%;
+    transform: translate(50%, -50%);
+    z-index: 2;
+    background: linear-gradient(
+      180deg,
+      rgba(229, 228, 228, 0) 0%,
+      #eff1f42a 10%,
+      #eff1f468 30%,
+      #eff1f4bd 50%,
+      #eff1f4 70%,
+      #eff1f4 70%
+    );
+    height: 115px;
+    transition: 0.5s;
+  }
+  .blur.dark {
+    display: block;
+    position: fixed;
+    bottom: -58px;
+    right: 50%;
+    transform: translate(50%, -50%);
+    z-index: 2;
+    background: linear-gradient(
+      180deg,
+      rgb(0 0 0 / 0%) 0%,
+      rgb(0 0 0 / 20%) 10%,
+      rgb(0 0 0 / 40%) 20%,
+      rgb(0 0 0 / 60%) 30%,
+      rgb(0 0 0 / 80%) 40%,
+      rgb(0 0 0) 50%,
+      rgb(0 0 0) 100%
+    );
+    height: 115px;
+  }
+}
+
+#root > div > header > div.container-sm {
+  max-width: 768px;
+}

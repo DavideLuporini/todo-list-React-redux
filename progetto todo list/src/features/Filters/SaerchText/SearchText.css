@@ -1,0 +1,84 @@
+.glass {
+  border-radius: 50%;
+  padding-right: 40px;
+  cursor: pointer;
+}
+.glass.fa-xmark {
+  color: var(--colorDanger);
+}
+.glass:hover {
+  opacity: 0.5;
+}
+
+.form-search > .glass {
+  position: absolute;
+  font-size: 1rem;
+}
+.glass.active {
+  border-radius: 50%;
+  padding: 0;
+}
+
+.form-search.active {
+  position: relative;
+  border-radius: 25px;
+  width: 75%;
+  transition: 0.5s;
+}
+/* .form-search.active > .glass {
+  right: 0px;
+} */
+.form-search {
+  position: relative;
+  width: 0;
+  border: 0;
+  transition: 0.5s;
+  background-color: transparent;
+  padding: 3px 0px;
+}
+.form-search input.active {
+  position: relative;
+  width: 90%;
+  font-size: 1.2rem;
+  transition: 0.5s;
+  border: none;
+  border-bottom: black 1px dashed;
+}
+.form-search input.active.dark {
+  border-bottom: var(--colorDark) 1px dashed;
+  color: var(--colorDark);
+}
+.form-search input {
+  position: relative;
+  background-color: transparent;
+  width: 0;
+  padding: 0;
+  border: 0;
+  transition: 0.5s;
+}
+#search-bar {
+  width: 0;
+  padding: 0;
+  border: 0;
+  transition: 0.5s;
+}
+#search-bar input:focus-visible {
+  outline: 0px;
+}
+:focus-visible {
+  outline: 0px;
+}
+#search-bar input:focus {
+  outline: 0;
+}
+.input-text.dark:focus-visible {
+  box-shadow: var(--shadowPrimary);
+}
+#search-bar.active {
+  width: 35%;
+  padding: 0px;
+  margin-right: 10px;
+  border: 1px solid black;
+  transition: 1s;
+  transition-delay: 0.5s;
+}

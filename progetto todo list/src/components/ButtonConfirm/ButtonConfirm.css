@@ -1,0 +1,18 @@
+.btn-add {
+  font-size: 0.9rem;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--backgroundPrimary);
+  color: white;
+}
+.btn-add.dark {
+  background-color: var(--backgroundPrimary);
+}
+.btn-add.dark:hover {
+  background-color: var(--backgroundPrimary);
+}
+.btn-add:hover {
+  background-color: var(--backgroundPrimary);
+  box-shadow: var(--shadowPrimary), var(--shadowInsetPrimary);
+}
